@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音声出力デバイス設定</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/popup.css">
+<body>
+    <div class="popup-container">
+        <h3 class="popup-header">音声出力デバイス</h3>
+        <div class="form-group">
+            <label for="audioDevices">出力デバイス:</label>
+            <div class="select-wrapper">
+                <i class="fas fa-volume-up"></i>
+                <select id="audioDevices"></select>
+            </div>
+        </div>
+        <div class="volume-container">
+            <label class="volume-label">音量</label>
+            <div class="volume-wrapper">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volumeSlider" class="volume-slider" min="0" max="200" value="100">
+                <span class="volume-display" id="volumeValue">100%</span>
+                <span class="reset-volume" id="volumeReset"><i class="fas fa-undo"></i></span>
+            </div>
+        </div>
+        <button class="action-btn" id="applyButton"><i class="fas fa-check"></i> 決定</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
